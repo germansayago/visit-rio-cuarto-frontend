@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        home
+        about
       </h1>
       <h2 class="subtitle">
         Visit Rio Cuarto
