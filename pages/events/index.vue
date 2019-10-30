@@ -28,16 +28,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.container{
-  width: 920px;
-  margin: auto;
-  text-align: center;
-}
-.event{
-  margin-bottom: 8px;
-  background-color: #ccc;
-  padding: 4px;
-}
-</style>

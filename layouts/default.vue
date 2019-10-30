@@ -66,4 +66,14 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+.container{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.event{
+  margin-bottom: 8px;
+  background-color: #ccc;
+  padding: 4px;
+}
 </style>
