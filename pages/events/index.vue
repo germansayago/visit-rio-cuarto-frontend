@@ -33,10 +33,10 @@ export default {
   },
 
   asyncData ({ params, error }) {
-    return axios.get(`http://127.0.0.1:8000/api/events`)
+    return axios.get(`http://admin.visitriocuarto.com/api/events`)
       .then((res) => {
         return {
-          events: res.data.result.data,
+          events: res.data.result,
           loading: false
         }
       })
