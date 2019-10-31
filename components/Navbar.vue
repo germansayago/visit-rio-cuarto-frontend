@@ -1,39 +1,36 @@
 <template>
-  <div>
-    <nav>
-      <ul>
-        <li>
-          <a href="/">home</a>
-        </li>
-        <li>
-          <a href="/about">about</a>
-        </li>
-        <li>
-          <a href="/events">events</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</template>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Bootstrap
+      </a>
 
-<style lang="scss">
-  nav{
-    background-color: #ddd;
-    text-align: center;
-    padding: 25px 0px;
-    margin-bottom: 30px;
-    ul{
-      list-style: none;
-      padding: 0px;
-      li{
-        display: inline;
-        a{
-          background-color: black;
-          color: #ddd;
-          padding: 5px 10px;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-</style>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" />
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Events</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
