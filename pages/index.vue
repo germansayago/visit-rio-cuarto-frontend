@@ -8,6 +8,9 @@
       <h2 class="subtitle">
         Visit Rio Cuarto
       </h2>
+      <div>
+        <i class="fas fa-coffee fa-xs"></i>
+      </div>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
