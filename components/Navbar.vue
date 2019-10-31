@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav class="navbar navbar-expand-xl navbar-light bg-light py-2 mb-5">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Bootstrap
+        <img src="~/assets/images/icon-visit-rio-cuarto-black.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        VISIT RIO CUARTO
       </a>
 
       <button
