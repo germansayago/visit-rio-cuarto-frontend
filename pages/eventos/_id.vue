@@ -20,7 +20,6 @@
 <script>
 import axios from 'axios'
 import Loading from '~/components/Loading.vue'
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
 
 export default {
   components: {

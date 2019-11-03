@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <div>
-      <h1>About</h1>
-    </div>
+    <h1>testing</h1>
   </div>
 </template>
