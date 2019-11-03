@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-xl navbar-light bg-light py-2 mb-5">
-    <div class="container">
+  <nav class="navbar navbar-expand-xl navbar-dark bg-primary py-2">
+    <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img src="~/assets/images/icon-visit-rio-cuarto-black.svg" width="30" height="30" class="d-inline-block align-top" alt="">
         VISIT RIO CUARTO
