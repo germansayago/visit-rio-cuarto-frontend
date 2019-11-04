@@ -36,7 +36,7 @@
                 </div>
               </div>
             </div>
-            <div v-if="loading">Cargando...</div>
+            <div v-if="loading">Cargando....</div>
           </div>
           <div class="col-md-4">
             <div class="container">
