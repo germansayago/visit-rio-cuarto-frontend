@@ -1,12 +1,13 @@
 <template>
-  <div class="main">
+  <div role="main" class="main flex-shrink-0">
     <div class="container">
       <div class="jumbotron">
+        <img :src="`${event.file.path}${event.id}/${event.file.file}`" alt="" class="img-fluid">
         <h1 class="display-4">
           {{ event.title }}
         </h1>
         <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+          {{ event.summary }}
         </p>
         <hr class="my-4">
         <p>
