@@ -51,7 +51,7 @@
 
 <script>
 import axios from 'axios'
-import Hero from '~/components/home/hero.vue'
+import Hero from '~/components/home/tHero.vue'
 
 export default {
   components: {
