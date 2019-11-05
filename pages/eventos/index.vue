@@ -7,14 +7,11 @@
             <div class="card-header">
               {{ event.calendars[0].start_date }}
             </div>
-            <img :src="`${event.file.path}${event.id}/${event.file.file}`" alt="" class="img-fluid">
+            <img :src="`${event.file.path}${event.file.file}`" alt="" class="img-fluid">
             <div  class="card-body">
               <h3 class="card-title">
                 {{ event.title }}
               </h3>
-              <p class="card-text">
-                {{ event.summary }}
-              </p>
               <p class="card-text">
                 {{ event.place.name }}
               </p>
@@ -49,7 +46,7 @@ export default {
   },
 
   asyncData ({ params, error }) {
-    return axios.get(`http://admin.visitriocuarto.com/api/events`)
+    return axios.get(`https://visitariocuarto.gob.ar/api/events`)
       .then((res) => {
         return {
           events: res.data.data,
