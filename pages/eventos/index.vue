@@ -1,13 +1,11 @@
 <template>
   <div class="main">
     <div class="container">
+      <h1 class="text-center mb-5 display-4">eventos recomentados</h1>
       <div class="card-columns">
         <div v-for="event in events" :key="event.id">
-          <div v-if="event.state === 1 | event.group_id === 1" class="card">
-            <div class="card-header">
-              {{ event.calendars[0].start_date }}
-            </div>
-            <img :src="`${event.file.path}${event.file.file}`" alt="" class="img-fluid">
+          <div v-if="event.group == 1 && event.state == 1" class="card mb-4">
+            <img :src="`${event.file.path}/${event.file.file}`" alt="" class="img-fluid">
             <div  class="card-body">
               <h3 class="card-title">
                 {{ event.title }}
@@ -24,20 +22,15 @@
           </div>
         </div>
       </div>
-      <loading v-if="loading" />
+      <div v-if="loading">Cargando....</div>
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Loading from '~/components/Loading.vue'
 
 export default {
-  components: {
-    Loading
-  },
-
   data () {
     return {
       events: [],
