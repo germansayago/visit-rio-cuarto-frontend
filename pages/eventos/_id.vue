@@ -11,17 +11,16 @@
             <p class="lead">
               {{ event.summary }}
             </p>
-            <p>{{ event.state }}</p>
             <hr class="my-4">
             <div class="row">
               <div class="col-md-6">
-                <b>fecha</b>
+                <b>Cuándo?</b>
                 <p v-for="calendar in event.calendars" :key="calendar.index">
-                  {{ calendar.start_date }}
+                  {{ event.calendars[0].start_date | moment }} ({{ event.calendars[0].start_date | moment2 }})
                 </p>
               </div>
               <div class="col-md-6">
-                <b>lugar</b>
+                <b>Dónde?</b>
                 <p>
                   {{ event.place.name }} <br>
                   <a v-if="event.place.web" :href="`http://${event.place.web}/`" target="_blank">{{ event.place.web }}</a>
@@ -47,6 +46,7 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment'
 import Loading from '~/components/Loading.vue'
 
 export default {
@@ -58,6 +58,21 @@ export default {
     return {
       event: null,
       loading: true
+    }
+  },
+
+  methods: {
+    moment () {
+      return moment()
+    }
+  },
+
+  filters: {
+    moment (date) {
+      return moment(String(date)).locale('es').format('ll')
+    },
+    moment2 (date) {
+      return moment(String(date)).locale('es').endOf('day').fromNow()
     }
   },
 

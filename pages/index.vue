@@ -7,13 +7,23 @@
         <div class="card-columns">
           <div v-for="event in events" :key="event.id">
             <div v-if="event.group == 1 && event.state == 1" class="card mb-4">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-8">
+                    <span class="text-uppercase">{{ event.calendars[0].start_date | moment }}</span>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>{{ event.calendars[0].start_date | moment2 }}</span>
+                  </div>
+                </div>
+              </div>
               <img :src="`${event.file.path}/${event.file.file}`" alt="" class="img-fluid">
               <div  class="card-body">
                 <h3 class="card-title">
                   {{ event.title }}
                 </h3>
                 <p class="card-text">
-                  {{ event.place.name }}
+                  Donde: <b>{{ event.place.name }}</b>
                 </p>
               </div>
               <div class="card-footer">
@@ -32,6 +42,7 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment'
 import Hero from '~/components/home/tHero.vue'
 
 export default {
@@ -43,6 +54,21 @@ export default {
     return {
       events: [],
       loading: false
+    }
+  },
+
+  methods: {
+    moment () {
+      return moment()
+    }
+  },
+
+  filters: {
+    moment (date) {
+      return moment(String(date)).locale('es').format('ll')
+    },
+    moment2 (date) {
+      return moment(String(date)).locale('es').endOf('day').fromNow()
     }
   },
 
